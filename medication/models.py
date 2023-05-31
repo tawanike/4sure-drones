@@ -7,6 +7,8 @@ class Medicine(models.Model):
     weight = models.IntegerField(default=0)  # What if the weight has decimals
     code = models.CharField(max_length=255)  # Uppercase letters, underscore, numbers
     image = models.ImageField(upload_to='medication/')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         db_table = 'medicines'
