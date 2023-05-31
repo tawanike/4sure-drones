@@ -19,7 +19,7 @@ RUN python3 manage.py migrate
 
 RUN python3 manage.py initadmin
 
-RUN python3 manage.py loaddata drones.json medication.json
+RUN python3 manage.py loaddata drones.json medication.json loads.json
 
 
 EXPOSE 8000

@@ -1,3 +1,42 @@
 [
-    {}
+    {
+        "model": "loads.load",
+        "pk": 1,
+        "fields": {
+            "drone": 5,
+            "payload": 1,
+            "created_at": "2023-05-31T07:43:09.242Z",
+            "updated_at": "2023-05-31T07:43:09.242Z"
+        }
+    },
+    {
+        "model": "loads.load",
+        "pk": 2,
+        "fields": {
+            "drone": 5,
+            "payload": 1,
+            "created_at": "2023-05-31T07:48:20.877Z",
+            "updated_at": "2023-05-31T07:48:20.877Z"
+        }
+    },
+    {
+        "model": "loads.load",
+        "pk": 3,
+        "fields": {
+            "drone": 5,
+            "payload": 1,
+            "created_at": "2023-05-31T07:49:18.658Z",
+            "updated_at": "2023-05-31T07:49:18.658Z"
+        }
+    },
+    {
+        "model": "loads.load",
+        "pk": 4,
+        "fields": {
+            "drone": 5,
+            "payload": 1,
+            "created_at": "2023-05-31T08:27:59.122Z",
+            "updated_at": "2023-05-31T08:27:59.122Z"
+        }
+    }
 ]
