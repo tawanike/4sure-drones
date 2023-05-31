@@ -3,14 +3,12 @@ from medication.serializers import MedicationSerializer
 from rest_framework import generics
 
 
-class MedicationAPIView(generics.ListCreateAPIView):
+class MedicinesAPIView(generics.ListCreateAPIView):
     serializer_class = MedicationSerializer
-
-    def get_queryset(self):
-        return Medicine.objects.filter(user=self.request.user)
+    queryset = Medicine.objects.all()
 
 
-class MedicinesAPIView(generics.RetrieveUpdateDestroyAPIView):
+class MedicineAPIView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = MedicationSerializer
     queryset = Medicine.objects.all()
     lookup_field = 'id'

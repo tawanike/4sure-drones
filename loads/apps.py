@@ -1,9 +1,9 @@
 from django.apps import AppConfig
 
 
-class DronesConfig(AppConfig):
+class LoadsConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "drones"
+    name = "loads"
 
     def ready(self):
-        from drones import signals  # noqa
+        from loads import signals  # noqa

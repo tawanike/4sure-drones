@@ -27,8 +27,12 @@ SECRET_KEY = "django-insecure-f&75@lmc*$jyr#%p0btp0g3)y!r68binppx6_tvjqh1$cdp#tb
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+APPEND_SLASH = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_WHITELIST = ["chrome-extension://coohjcphdfgbiolnekdpbcijmhambjff"]
+CSRF_TRUSTED_ORIGINS = ["chrome-extension://coohjcphdfgbiolnekdpbcijmhambjff"]
 
 
 # Application definition
@@ -44,6 +48,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
 
+    "loads",
     "drones",
     "medication"
 ]
@@ -158,6 +163,9 @@ REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.AllowAny",
     ],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 20,
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
