@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  api:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
+    image: api:app
+    restart: always
+
+  worker:
+    restart: always
+    build: .
+    command: celery -A admin worker -B -l INFO
+    volumes:
+      - .:/app
+    container_name: worker
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - redis
+      - api
+
+  redis:
+    image: redis:alpine
+    container_name: redis

@@ -1,0 +1,145 @@
+[
+    {
+        "model": "drones.drone",
+        "pk": 21,
+        "fields": {
+            "serial_number": "ZKIM110522",
+            "model": "heavyweight",
+            "state": "idle",
+            "weight_limit": 500,
+            "battery_capacity": 100,
+            "created_at": "2021-10-12T05:57:26.604Z",
+            "updated_at": "2021-10-12T05:57:26.604Z"
+        }
+    },
+    {
+        "model": "drones.drone",
+        "pk": 22,
+        "fields": {
+            "serial_number": "VM190591",
+            "model": "lightweight",
+            "state": "loading",
+            "weight_limit": 150,
+            "battery_capacity": 80,
+            "created_at": "2021-09-12T05:57:26.604Z",
+            "updated_at": "2021-09-12T05:57:26.604Z"
+        }
+    },
+    {
+        "model": "drones.drone",
+        "pk": 23,
+        "fields": {
+            "serial_number": "TJM250689",
+            "model": "heavyweight",
+            "state": "loaded",
+            "weight_limit": 450,
+            "battery_capacity": 50,
+            "created_at": "2021-03-12T05:57:26.604Z",
+            "updated_at": "2021-03-12T05:57:26.604Z"
+        }
+    },
+    {
+        "model": "drones.drone",
+        "pk": 24,
+        "fields": {
+            "serial_number": "TAM200388",
+            "model": "cruiserweight",
+            "state": "idle",
+            "weight_limit": 350,
+            "battery_capacity": 40,
+            "created_at": "2021-08-12T05:57:26.604Z",
+            "updated_at": "2021-08-12T05:57:26.604Z"
+        }
+    },
+    {
+        "model": "drones.drone",
+        "pk": 25,
+        "fields": {
+            "serial_number": "JM241257",
+            "model": "middleweight",
+            "state": "delivered",
+            "weight_limit": 250,
+            "battery_capacity": 73,
+            "created_at": "2021-09-12T05:57:26.604Z",
+            "updated_at": "2021-09-12T05:57:26.604Z"
+        }
+    },
+    {
+        "model": "drones.drone",
+        "pk": 26,
+        "fields": {
+            "serial_number": "SM280265",
+            "model": "middleweight",
+            "state": "delivered",
+            "weight_limit": 250,
+            "battery_capacity": 100,
+            "created_at": "2021-09-12T05:57:26.604Z",
+            "updated_at": "2021-09-12T05:57:26.604Z"
+        }
+    },
+    {
+        "model": "drones.drone",
+        "pk": 26,
+        "fields": {
+            "serial_number": "PFM240368",
+            "model": "cruiserweight",
+            "state": "delivering",
+            "weight_limit": 400,
+            "battery_capacity": 24,
+            "created_at": "2021-09-12T05:57:26.604Z",
+            "updated_at": "2021-09-12T05:57:26.604Z"
+        }
+    },
+    {
+        "model": "drones.drone",
+        "pk": 27,
+        "fields": {
+            "serial_number": "ETM241272",
+            "model": "lightweight",
+            "state": "returning",
+            "weight_limit": 180,
+            "battery_capacity": 20,
+            "created_at": "2021-09-12T05:57:26.604Z",
+            "updated_at": "2021-09-12T05:57:26.604Z"
+        }
+    },
+    {
+        "model": "drones.drone",
+        "pk": 28,
+        "fields": {
+            "serial_number": "SLM280401",
+            "model": "lightweight",
+            "state": "idle",
+            "weight_limit": 180,
+            "battery_capacity": 20,
+            "created_at": "2021-09-12T05:57:26.604Z",
+            "updated_at": "2021-09-12T05:57:26.604Z"
+        }
+    },
+    {
+        "model": "drones.drone",
+        "pk": 29,
+        "fields": {
+            "serial_number": "VTM241298",
+            "model": "middleweight",
+            "state": "loading",
+            "weight_limit": 280,
+            "battery_capacity": 36,
+            "created_at": "2021-09-12T05:57:26.604Z",
+            "updated_at": "2021-09-12T05:57:26.604Z"
+        }
+    },
+    {
+        "model": "drones.drone",
+        "pk": 30,
+        "fields": {
+            "serial_number": "LCKM060825",
+            "model": "lightweight",
+            "state": "idle",
+            "weight_limit": 180,
+            "battery_capacity": 100,
+            "created_at": "2021-09-12T05:57:26.604Z",
+            "updated_at": "2021-09-12T05:57:26.604Z"
+        }
+    }
+]

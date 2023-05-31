@@ -142,22 +142,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# CELERY_RESULT_BACKEND = os.environ.get("REDIS_URL")
+BROKER_URL = os.environ.get("REDIS_URL")
+CELERY_RESULT_BACKEND = os.environ.get("REDIS_URL")
 
 CELERY_ACCEPT_CONTENT = ["application/json"]
 CELERY_TASK_SERIALIZER = "json"
 CELERY_RESULT_SERIALIZER = "json"
 CELERY_TIMEZONE = "Africa/Johannesburg"
 
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
@@ -170,3 +169,7 @@ REST_FRAMEWORK = {
     "PAGE_SIZE": 20,
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
 }
+
+ADMIN_USERNAME = 'admin'
+ADMIN_EMAIL = 'admin@mysite.com'
+ADMIN_INITIAL_PASSWORD = 'qwerty'  # To be changed after first login by admin

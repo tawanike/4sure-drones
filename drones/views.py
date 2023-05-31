@@ -4,7 +4,6 @@ from loads.models import Load
 from loads.serializers import LoadSerializer
 from rest_framework import generics, status
 from rest_framework.response import Response
-from rest_framework.views import APIView
 
 
 class DronesAPIView(generics.ListCreateAPIView):

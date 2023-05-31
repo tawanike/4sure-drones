@@ -11,6 +11,7 @@ class LoadSerializer(serializers.ModelSerializer):
     payload = MedicationSerializer()
 
     def create(self, validated_data):
+        # TODO: Handle payloads with more than one item but less than weight limit
         drone = validated_data.get('drone')
         payload = validated_data.get('payload')
 
