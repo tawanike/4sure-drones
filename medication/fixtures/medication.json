@@ -3,7 +3,7 @@
         "model": "medication.medicine",
         "pk": 2,
         "fields": {
-            "name": "Telfast Suspension",
+            "name": "Telfast",
             "weight": 150,
             "code": "CRA03186",
             "image": "static/medication/download.jpeg",

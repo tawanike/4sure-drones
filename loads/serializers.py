@@ -15,7 +15,15 @@ class LoadSerializer(serializers.ModelSerializer):
         drone = validated_data.get('drone')
         payload = validated_data.get('payload')
 
-        # Check drone weight limit
+        if drone.battery_capacity < Drone.BATTERY_CAPACITY_LIMIT:
+            raise serializers.ValidationError({"error": "Drone battery too low to load payload."})
+
+        else:
+            # Drone state can transition to loading
+            drone.state = Drone.LOADING
+            drone.save()
+
+        # Try to load payload
         if payload.weight > drone.weight_limit:
             raise serializers.ValidationError(
                 {"error": 'Payload weight exceeds drone weight limit.'})
@@ -23,10 +31,8 @@ class LoadSerializer(serializers.ModelSerializer):
         if drone.state != Drone.IDLE:
             raise serializers.ValidationError({"error": "Drone is not ready for payload."})
 
-        if drone.battery_capacity < Drone.BATTERY_CAPACITY_LIMIT:
-            raise serializers.ValidationError({"error": "Drone battery too low to load payload."})
-
-        drone.state = Drone.LOADING
+        # If no errors transition drone state to loaded
+        drone.state = Drone.LOADED
         drone.save()
 
         return validated_data
